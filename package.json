@@ -1,0 +1,32 @@
+{
+  "name": "evento-aniversario",
+  "version": "1.0.0",
+  "description": "Landing page para evento de aniversário com contagem regressiva e design moderno.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=8080 --open",
+    "build": "webpack",
+    "sass": "sass --watch style.scss:style.css"
+  },
+  "keywords": [
+    "evento",
+    "aniversário",
+    "landing-page",
+    "contagem-regressiva",
+    "css",
+    "javascript"
+  ],
+  "author": "Seu Nome",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.1.4",
+    "babel-loader": "^8.2.5",
+    "@babel/core": "^7.22.16",
+    "@babel/preset-env": "^7.22.16",
+    "autoprefixer": "^10.4.15",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {}
+}

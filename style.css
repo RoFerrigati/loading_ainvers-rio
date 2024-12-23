@@ -1,0 +1,120 @@
+/* Variáveis CSS */
+:root {
+    --primary-color: rgb(255, 99, 71); /* Tomato */
+    --secondary-color: rgb(60, 179, 113); /* Medium Sea Green */
+    --highlight-color: rgb(255, 215, 0); /* Gold */
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+    --background-color: rgb(30, 30, 30); /* Dark Background */
+}
+
+/* Estilo Global */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    animation: headerAnim 3s ease-in-out infinite;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Imagem de Destaque */
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    animation: zoomIn 6s ease-out infinite;
+}
+
+/* Contagem Regressiva */
+.countdown {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+#countdown {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--highlight-color);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    animation: countdownAnim 1s ease-in-out infinite;
+}
+
+/* Botão de Compra */
+.cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#buyButton {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#buyButton:hover {
+    background-color: rgb(34, 139, 34); /* Forest Green */
+    transform: scale(1.1);
+}
+
+/* Animações */
+@keyframes headerAnim {
+    0% { background-color: rgb(255, 99, 71); }
+    50% { background-color: rgb(255, 140, 0); }
+    100% { background-color: rgb(255, 99, 71); }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(1); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes countdownAnim {
+    0% { color: rgb(255, 215, 0); }
+    50% { color: rgb(255, 255, 255); }
+    100% { color: rgb(255, 215, 0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    #countdown {
+        font-size: 2rem;
+    }
+}
